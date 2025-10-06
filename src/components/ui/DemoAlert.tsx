@@ -24,13 +24,16 @@ const DemoAlert: React.FC = () => {
       </svg>
       <h1 style="font-size:2rem;font-weight:bold;margin-bottom:1rem">Acesso Negado</h1>
       <p style="font-size:1rem;color:#d1d5db;margin-bottom:1rem">Interaja com o aviso inicial para continuar.</p>
-      <button onclick="window.location.reload()" style="background:#eab308;color:#1f2937;padding:0.75rem 1.5rem;border-radius:0.5rem;font-weight:bold;cursor:pointer;border:none">Recarregar Página</button>
+      <button id="reload-btn" style="background:#eab308;color:#1f2937;padding:0.75rem 1.5rem;border-radius:0.5rem;font-weight:bold;cursor:pointer;border:none">Recarregar Página</button>
     `;
 
     body.appendChild(container);
     setIsContentCorrupted(true);
 
-    // Bloqueia scroll completamente
+    document.getElementById("reload-btn")?.addEventListener("click", () => {
+      window.location.reload();
+    });
+
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
   }, []);
@@ -46,7 +49,6 @@ const DemoAlert: React.FC = () => {
       }
     }, 1000);
 
-    // Bloqueia scroll enquanto modal estiver aberto
     if (isOpen) {
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
@@ -95,7 +97,7 @@ const DemoAlert: React.FC = () => {
           . Nenhuma informação aqui representa serviço jurídico real.
         </p>
         <p className="text-white text-sm font-semibold">
-          Ao clicar em "Estou de Acordo", você aceita esta condição. Caso não
+          Ao clicar em {"\"Estou de Acordo\""}, você aceita esta condição. Caso não
           concorde, será redirecionado.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">

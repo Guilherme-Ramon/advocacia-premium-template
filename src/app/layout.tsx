@@ -77,31 +77,6 @@ export default function RootLayout({
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
                 />
-                <script src="https://cdn.tailwindcss.com"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            tailwind.config = {
-                                theme: {
-                                    extend: {
-                                        fontFamily: {
-                                            // Atualizado para Cormorant Garamond (mais elegante) e Roboto
-                                            'garamond': ['Cormorant Garamond', 'serif'], 
-                                            'roboto': ['Roboto', 'sans-serif'],
-                                        },
-                                        colors: {
-                                            'primary-dark': '#0A1931', // Azul Marinho Profundo
-                                            'accent-gold': '#C8A97E', // Dourado Clássico
-                                            'light-bg': '#F8F9FA', // Fundo Claro
-                                        }
-                                    },
-                                },
-                                // Configuração de plugins (necessário para Tailwind completo)
-                                plugins: [], 
-                            };
-                        `,
-                    }}
-                />
 
                 {/* Meta tag para garantir a correta escala em todos os dispositivos */}
                 <meta
@@ -110,7 +85,7 @@ export default function RootLayout({
                 />
             </head>
             {/* Classe base para todo o corpo, usando a fonte Roboto e o tema de cores Light. */}
-            <body className="font-roboto bg-light-bg text-primary-dark antialiased">
+            <body className="font-roboto bg-light-bg text-[#0A1931] antialiased">
                 {children}
             </body>
         </html>

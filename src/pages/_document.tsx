@@ -1,18 +1,19 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-    return (
-        <Html lang="pt-BR">
-            <Head>
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
-                />
-            </Head>
-            <body className="font-roboto bg-light-bg text-primary-dark antialiased">
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    );
+  return (
+    <Html lang="pt-BR">
+      <Head>
+        {/* Adicione suas fontes aqui */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }

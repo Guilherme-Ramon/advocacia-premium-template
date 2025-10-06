@@ -1,4 +1,24 @@
+/* src/app/globals.css */
+
+/* Importando o Tailwind "completo" direto */
+@import "tailwindcss";
+
+/* Quebra de palavras global */
 * {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+:root {
+    /* Marinho (Fundo Principal Escuro) */
+    --color-primary-dark: #0a1931;
+
+    /* Dourado (Acento e Destaque) */
+    --color-accent-gold: #c8a97e;
+
+    /* Claro (Fundo Principal Claro / Cor de Texto em Fundo Escuro) */
+    --color-light-bg: #f8f9fa;
+
+    /* Cor de hover para o botão principal */
+    --color-gold-hover: #b4966f; /* Um dourado ligeiramente mais escuro que o #C8A97E */
 }
